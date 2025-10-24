@@ -9,7 +9,6 @@ return {
   { import = "plugins.nvim-autopairs" },
   { import = "plugins.nvim-cmp" },
   { import = "plugins.regex-railroad" },
-  { import = "plugins.rust-tools" },
   { import = "plugins.telescope" },
   { import = "plugins.todo-comments" },
   { import = "plugins.toggleterm" },

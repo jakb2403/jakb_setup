@@ -26,10 +26,8 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require("lspconfig")
-
 			-- Lua
-			lspconfig.lua_ls.setup({
+			vim.lsp.config("lua_ls", {
 				settings = {
 					Lua = {
                         runtime = {
@@ -53,7 +51,7 @@ return {
 			})
 
 			-- Rust
-			lspconfig.rust_analyzer.setup({
+			vim.lsp.config("rust_analyzer", {
 			  	settings = {
 					["rust-analyzer"] = {
                         cargo = {
@@ -79,27 +77,27 @@ return {
 			})
 
             -- Python
-			lspconfig.pyright.setup({
+			vim.lsp.config("pyright", {
 				capabilities = require('cmp_nvim_lsp').default_capabilities()
 			})
 
             -- Yaml
-            lspconfig.yamlls.setup({})
+			vim.lsp.config("yamlls", {})
 
             -- TOML
-            lspconfig.taplo.setup({})
+			vim.lsp.config("taplo", {})
 
             -- C/C++
-            lspconfig.clangd.setup({})
+			vim.lsp.config("clangd", {})
 
             -- Bash
-            lspconfig.bashls.setup({})
+			vim.lsp.config("bashls", {})
 
             -- CMake
-            lspconfig.cmake.setup({})
+			vim.lsp.config("cmake", {})
 
             -- Docker
-            lspconfig.dockerls.setup({})
+			vim.lsp.config("dockerls", {})
 
 			-- Use LspAttach autocommand to only map the following keys
 			-- after the language server attaches to the current buffer
